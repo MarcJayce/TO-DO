@@ -1,0 +1,342 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+header{
+    display: flex;
+    background-color: #4B5945;
+    padding: 30px;
+}
+
+.logo{
+    color: #B2C9AD;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.main{
+    display: flex;
+    background-color: #e7e7e7;
+    height: 100vh;
+    z-index: 1000;
+}
+
+#left{
+    display: flex;
+    background-color: #66785F;
+    width: 20%;
+    flex-direction: column;
+}
+.Task-List{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    gap: 30px;
+    color: #171b15;
+    font-size: 20px;
+    margin-top: 100px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.Task-List>div:hover{
+    opacity: 40%;
+}
+
+.Projects{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.project-head{
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.add-project-btn{
+    margin-left: 30px;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    color: #66785F;
+    background-color: #4B5945;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.title:hover{
+    opacity: 40%;
+}
+
+.add-project-btn:hover{
+    background-color: #91AC8F;
+}
+
+#right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding: 30px;
+    margin-top: 20px;
+    color: #171b15;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #4B5945;
+    padding: 40px;
+    width: 500px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+    align-items: center;
+
+}
+
+.title-task{
+    color: #B2C9AD;
+    font-size: 20px;
+}
+
+.add-task-btn{
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #B2C9AD;
+    color: #171b15;
+    cursor: pointer;
+}
+
+.add-task-btn:hover{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+hr {
+    border: none;
+    border-top: 1px solid #171b15;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+}
+
+.hidden {
+    display: none;
+}
+
+
+.modal-content {
+    background-color: #B2C9AD;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 20%;
+    left: 75%;
+    z-index: 1003; /* Ensure it's above the modal backdrop */
+}
+
+.modal-content-two {
+    background-color: #B2C9AD;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 40%;
+    left: 15%;
+    z-index: 1003; /* Ensure it's above the modal backdrop */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    color: #171b15;
+}
+
+form input, form textarea, form select, form button {
+    margin-bottom: 10px;
+}
+
+
+form > button{
+    background-color: #4B5945;
+    color: #B2C9AD;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+form > button:hover{
+    opacity: 60%;
+}
+
+.remove-btn {
+    padding: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #7db863;
+    color: #c2ecb8;
+    font-size: 10px;
+    margin-left: 50px;
+   
+}
+
+.remove-btn-two {
+    padding: 6px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #3f3f3f;
+    font-size: 15px;
+    margin-left: 90px;
+    font-weight: bolder;
+
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 14px;
+    border-radius: 20px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .switch-hide{
+    display: hidden;
+  }
+
+  .task-card {
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #cccccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 16px; /* Add spacing inside the card */
+    margin: 10px 0; /* Add spacing between cards */
+    max-width: 300px; /* Limit width */
+    font-family: Arial, sans-serif; /* Modern font */
+}
+
+.task-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+.task-description {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #666666;
+}
+
+.task-priority {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ff5722; /* Priority color */
+}
+
+.task-due-date {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #3f51b5; /* Due date color */
+}
+
+.task-list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(150px,200px, 300px));
+    grid-template-rows: repeat(auto-fit, clamp(200px, 250px, 300px));
+    gap: 20px;
+    margin: 20px;
+}

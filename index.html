@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+<script defer src="main.js"></script></head>
+<body>
+    <section class="main">
+        <div id="left">
+            <header>
+                <div class="logo">ToDo List</div>
+             </header>
+            <div class="Task-List">
+                <!-- in here we can find the (All Task, Today Task, Important Task, And completed) -->
+                 <div class="all">All Task</div>
+                 <div class="important">Imporant</div>
+                 <div class="complete">Completed</div>
+            </div>
+            <div class="Projects">
+                <!-- This is where we can find the projects tab with the default project and a button to add new project -->
+                <div class="project-head">
+                    <div class="title-project">Projects</div>
+                    <button class="add-project-btn" id="openModalBtn">+</button>
+                </div>
+                <div id="content-area"></div>
+                <div class="project-list"></div>
+            </div>
+        </div>
+        
+        <div id="right">
+            <!-- this is where the task or list will be shown -->
+            <div class="name">All Task</div>
+            <div class="todo-container">
+                <div class="title-task">Task</div>
+                <button class="add-task-btn" id="openTaskModalBtn">+</button>
+            </div>
+            
+            <hr>
+            <div id="task-list-container"></div>
+            <div id="task-modal-container"></div>
+        </div>
+        
+    </section>
+</body>
+</html>
